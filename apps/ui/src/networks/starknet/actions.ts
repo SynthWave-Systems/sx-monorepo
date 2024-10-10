@@ -178,8 +178,8 @@ export function createActions(
             addr: params.validationStrategy.address,
             params: params.validationStrategy.generateParams
               ? params.validationStrategy.generateParams(
-                params.validationStrategy.params
-              )
+                  params.validationStrategy.params
+                )
               : []
           },
           proposalValidationStrategyMetadataUri,
@@ -755,8 +755,8 @@ export function createActions(
         })
       );
     },
-    followSpace: () => { },
-    unfollowSpace: () => { },
+    followSpace: () => {},
+    unfollowSpace: () => {},
     setAlias: async (web3: any, alias: string) => {
       await verifyStarknetNetwork(web3, chainId);
 
@@ -765,8 +765,8 @@ export function createActions(
         data: { alias }
       });
     },
-    updateUser: () => { },
-    updateStatement: () => { },
+    updateUser: () => {},
+    updateStatement: () => {},
     updateSettingsRaw: () => {
       throw new Error('Not implemented');
     },

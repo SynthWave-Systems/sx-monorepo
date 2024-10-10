@@ -23,8 +23,7 @@ export const createWalletProxy = (mnemonic: string, chainId: number) => {
     const normalizedSpaceAddress = spaceAddress.toLowerCase();
 
     if (!signers.has(normalizedSpaceAddress)) {
-      const index =
-        SPACES_INDICES.get(normalizedSpaceAddress) || DEFAULT_INDEX;
+      const index = SPACES_INDICES.get(normalizedSpaceAddress) || DEFAULT_INDEX;
       const wallet = getEthereumWallet(mnemonic, index);
       signers.set(normalizedSpaceAddress, wallet.connect(provider));
     }

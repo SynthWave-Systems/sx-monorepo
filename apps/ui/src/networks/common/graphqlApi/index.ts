@@ -293,16 +293,16 @@ export function createApi(
 
   const highlightApolloClient = opts.highlightApiUrl
     ? new ApolloClient({
-      link: createHttpLink({ uri: opts.highlightApiUrl }),
-      cache: new InMemoryCache({
-        addTypename: false
-      }),
-      defaultOptions: {
-        query: {
-          fetchPolicy: 'no-cache'
+        link: createHttpLink({ uri: opts.highlightApiUrl }),
+        cache: new InMemoryCache({
+          addTypename: false
+        }),
+        defaultOptions: {
+          query: {
+            fetchPolicy: 'no-cache'
+          }
         }
-      }
-    })
+      })
     : null;
 
   const highlightVotesCache = {

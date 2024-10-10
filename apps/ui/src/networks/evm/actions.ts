@@ -165,8 +165,8 @@ export function createActions(
             addr: params.validationStrategy.address,
             params: params.validationStrategy.generateParams
               ? params.validationStrategy.generateParams(
-                params.validationStrategy.params
-              )[0]
+                  params.validationStrategy.params
+                )[0]
               : '0x'
           },
           metadataUri: `ipfs://${pinned.cid}`,
@@ -759,10 +759,10 @@ export function createActions(
         })
       );
     },
-    followSpace: () => { },
-    unfollowSpace: () => { },
-    updateUser: () => { },
-    updateStatement: () => { },
-    setAlias: () => { }
+    followSpace: () => {},
+    unfollowSpace: () => {},
+    updateUser: () => {},
+    updateStatement: () => {},
+    setAlias: () => {}
   };
 }

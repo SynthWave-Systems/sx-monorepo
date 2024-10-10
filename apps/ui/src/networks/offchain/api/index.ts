@@ -390,10 +390,10 @@ function formatStrategy(strategy: ApiStrategy): StrategyTemplate {
     version: `v${strategy.version}`,
     defaultParams: !hasDefinition
       ? strategy.examples?.[0]?.strategy?.params || {
-        symbol: 'DAI',
-        address: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
-        decimals: 18
-      }
+          symbol: 'DAI',
+          address: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+          decimals: 18
+        }
       : {},
     spaceCount: strategy.spacesCount,
     paramsDefinition: hasDefinition
