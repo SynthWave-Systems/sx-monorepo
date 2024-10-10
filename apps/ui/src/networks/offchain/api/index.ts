@@ -188,7 +188,7 @@ function formatSpace(
     executors_destinations: [],
     executors_strategies: [],
     strategies: space.strategies.map(strategy => strategy.name),
-    strategies_indicies: [],
+    strategies_indices: [],
     strategies_params: space.strategies.map(strategy => strategy),
     strategies_parsed_metadata: [],
     validation_strategy: '',
@@ -310,7 +310,7 @@ function formatProposal(proposal: ApiProposal, networkId: NetworkID): Proposal {
     execution_destination: '',
     timelock_veto_guardian: null,
     strategies: proposal.strategies.map(strategy => strategy.name),
-    strategies_indicies: [],
+    strategies_indices: [],
     strategies_params: proposal.strategies.map(strategy => strategy),
     tx: '',
     execution_tx: null,
@@ -390,10 +390,10 @@ function formatStrategy(strategy: ApiStrategy): StrategyTemplate {
     version: `v${strategy.version}`,
     defaultParams: !hasDefinition
       ? strategy.examples?.[0]?.strategy?.params || {
-          symbol: 'DAI',
-          address: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
-          decimals: 18
-        }
+        symbol: 'DAI',
+        address: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+        decimals: 18
+      }
       : {},
     spaceCount: strategy.spacesCount,
     paramsDefinition: hasDefinition
