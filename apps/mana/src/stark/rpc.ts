@@ -154,6 +154,6 @@ export const createNetworkHandler = (chainId: string) => {
     registerTransaction,
     registerProposal,
     getAccount,
-    getDataByMessageHash,
+    getDataByMessageHash
   };
 };
