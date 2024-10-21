@@ -37,6 +37,16 @@ const ADDABLE_NETWORKS = {
     },
     rpcUrls: ['https://rpc.goerli.linea.build'],
     blockExplorerUrls: ['https://goerli.lineascan.build']
+  },
+  9700: {
+    chainName: 'OORT Testnet',
+    nativeCurrency: {
+      name: 'OORTTestnet',
+      symbol: 'OORT',
+      decimals: 18
+    },
+    rpcUrls: ['https://dev-rpc.oortech.com'],
+    blockExplorerUrls: ['https://dev-scan.oortech.com']
   }
 };
 

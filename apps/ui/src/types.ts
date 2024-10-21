@@ -21,7 +21,8 @@ export type NetworkID =
   | 'sep'
   | 'linea-testnet'
   | 'sn'
-  | 'sn-sep';
+  | 'sn-sep'
+  | 'oorttestnet';
 
 export type ChainId = number | string;
 

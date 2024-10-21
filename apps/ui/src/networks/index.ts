@@ -14,11 +14,12 @@ const optimismNetwork = createEvmNetwork('oeth');
 const ethereumNetwork = createEvmNetwork('eth');
 const sepoliaNetwork = createEvmNetwork('sep');
 const lineaTestnetNetwork = createEvmNetwork('linea-testnet');
+const oortTestnetNetwork = createEvmNetwork('oorttestnet');
 
 export const enabledNetworks: NetworkID[] = import.meta.env
   .VITE_ENABLED_NETWORKS
   ? (import.meta.env.VITE_ENABLED_NETWORKS.split(',') as NetworkID[])
-  : ['s', 's-tn', 'eth', 'matic', 'arb1', 'oeth', 'sep', 'sn', 'sn-sep'];
+  : ['s', 's-tn', 'eth', 'matic', 'arb1', 'oeth', 'sep', 'sn', 'sn-sep', 'oorttestnet'];
 
 export const evmNetworks: NetworkID[] = [
   'eth',
@@ -26,13 +27,14 @@ export const evmNetworks: NetworkID[] = [
   'arb1',
   'oeth',
   'sep',
-  'linea-testnet'
+  'linea-testnet',
+  'oorttestnet',
 ];
 export const offchainNetworks: NetworkID[] = ['s', 's-tn'];
 export const starknetNetworks: NetworkID[] = ['sn', 'sn-sep'];
 // This network is used for aliases/follows/profiles/explore page.
 export const metadataNetwork: NetworkID =
-  import.meta.env.VITE_METADATA_NETWORK || 's';
+  import.meta.env.VITE_METADATA_NETWORK || 'oorttestnet';
 
 export const getNetwork = (id: NetworkID) => {
   if (!enabledNetworks.includes(id))
@@ -48,6 +50,7 @@ export const getNetwork = (id: NetworkID) => {
   if (id === 'linea-testnet') return lineaTestnetNetwork;
   if (id === 'sn') return starknetNetwork;
   if (id === 'sn-sep') return starknetSepoliaNetwork;
+  if (id === 'oorttestnet') return oortTestnetNetwork;
 
   throw new Error(`Unknown network ${id}`);
 };

@@ -10,6 +10,7 @@ import {
   evmOptimism,
   evmPolygon,
   evmSepolia,
+  evmoortTestnet,
   getEvmStrategy
 } from '@snapshot-labs/sx';
 import { vote as highlightVote } from '@/helpers/highlight';
@@ -52,7 +53,8 @@ const CONFIGS: Record<number, EvmNetworkConfig> = {
   42161: evmArbitrum,
   1: evmMainnet,
   11155111: evmSepolia,
-  59140: evmLineaGoerli
+  59140: evmLineaGoerli,
+  9700: evmoortTestnet
 };
 
 export function createActions(

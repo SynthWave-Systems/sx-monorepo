@@ -16,7 +16,7 @@ const target = ['esnext'];
 export default defineConfig({
   base: ELECTRON ? path.resolve(__dirname, './dist') : undefined,
   server: {
-    host: '127.0.0.1'
+    host: true
   },
   define: {
     'process.env': process.env

@@ -30,16 +30,16 @@ export function createConstants(networkId: NetworkID) {
 
   const SUPPORTED_STRATEGIES = {
     [config.Strategies.Vanilla]: true,
-    [config.Strategies.Comp]: true,
-    [config.Strategies.OZVotes]: true,
-    [config.Strategies.Whitelist]: true
+    [config.Strategies.Comp]: false,
+    [config.Strategies.OZVotes]: false,
+    [config.Strategies.Whitelist]: false
   };
 
   const SUPPORTED_EXECUTORS = {
     SimpleQuorumAvatar: true,
     SimpleQuorumTimelock: true,
-    Axiom: true,
-    Isokratia: true
+    Axiom: false,
+    Isokratia: false
   };
 
   const RELAYER_AUTHENTICATORS = {
@@ -354,7 +354,7 @@ export function createConstants(networkId: NetworkID) {
             type: 'string',
             maxLength: MAX_SYMBOL_LENGTH,
             title: 'Symbol',
-            examples: ['e.g. UNI']
+            examples: ['e.g. OORT']
           }
         }
       }
@@ -409,7 +409,7 @@ export function createConstants(networkId: NetworkID) {
             type: 'string',
             maxLength: MAX_SYMBOL_LENGTH,
             title: 'Symbol',
-            examples: ['e.g. UNI']
+            examples: ['e.g. OORT']
           }
         }
       }

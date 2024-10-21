@@ -1,7 +1,7 @@
 import coinbaseIcon from '@/assets/connectors/coinbase.png';
 import gnosisIcon from '@/assets/connectors/gnosis.png';
 import metamaskIcon from '@/assets/connectors/metamask.png';
-import starknetIcon from '@/assets/connectors/starknet.png';
+//import starknetIcon from '@/assets/connectors/starknet.png';
 import walletconnectIcon from '@/assets/connectors/walletconnect.png';
 import { getUrl } from '@/helpers/utils';
 import { APP_NAME } from './constants';
@@ -14,7 +14,7 @@ export default {
     root: 'ethereum',
     icon: metamaskIcon
   },
-  walletconnect: {
+  /*walletconnect: {
     id: 'walletconnect',
     name: 'WalletConnect',
     network: '1',
@@ -26,8 +26,8 @@ export default {
       optionalMethods: ['eth_sendTransaction', 'eth_signTypedData_v4'],
       showQrModal: true
     }
-  },
-  walletlink: {
+  },*/
+  /*walletlink: {
     id: 'walletlink',
     name: 'Coinbase',
     network: '1',
@@ -38,19 +38,19 @@ export default {
       chainId: 1,
       ethJsonrpcUrl: 'https://cloudflare-eth.com'
     }
-  },
+  },*/
   gnosis: {
     id: 'gnosis',
     type: 'gnosis',
     name: 'Gnosis Safe',
     icon: gnosisIcon
   },
-  argentx: {
+  /*argentx: {
     id: 'argentx',
     name: 'Starknet',
     root: 'starknet',
     icon: starknetIcon
-  }
+  }*/
 };
 
 export function mapConnectorId(sourceName: string) {

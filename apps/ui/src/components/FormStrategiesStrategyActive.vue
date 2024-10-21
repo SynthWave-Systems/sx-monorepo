@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import networks from '@snapshot-labs/snapshot.js/src/networks.json';
+//import networks from '@snapshot-labs/snapshot.js/src/networks.json';
+import networks from '@/helpers/networks';
 import { getUrl, shorten } from '@/helpers/utils';
 import { getNetwork, offchainNetworks } from '@/networks';
 import { StrategyConfig } from '@/networks/types';
@@ -32,6 +33,7 @@ defineEmits<{
 
 const network = computed(() => getNetwork(props.networkId));
 const hasAddress = computed(() => props.strategy.address.startsWith('0x'));
+
 const strategyNetworkDetails = computed<NetworkDetails>(() => {
   if (!props.strategy.chainId) return null;
   if (!(props.strategy.chainId in networks)) return null;

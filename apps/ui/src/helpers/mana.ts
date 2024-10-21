@@ -1,5 +1,5 @@
 export const MANA_URL =
-  import.meta.env.VITE_MANA_URL || 'http://localhost:3000';
+  import.meta.env.VITE_MANA_URL || 'http://localhost:3001';
 
 async function rpcCall(path: string, method: string, params: any) {
   const res = await fetch(`${MANA_URL}/${path}`, {

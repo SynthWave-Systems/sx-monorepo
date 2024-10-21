@@ -6,7 +6,7 @@
   "main": "main.js",
   "repository": "snapshot-labs/sx-monorepo",
   "scripts": {
-    "dev": "vite --port=8080",
+    "dev": "vite --port=3004 --host",
     "build": "vite build",
     "story:dev": "histoire dev",
     "story:build": "histoire build",

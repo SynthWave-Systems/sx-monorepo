@@ -46,6 +46,46 @@ function createStandardConfig(
   };
 }
 
+function createStandardConfigOORT(
+  eip712ChainId: number,
+  additionalProperties: AdditionalProperties = {}
+) {
+  const additionalAuthenticators = additionalProperties.authenticators || {};
+  const additionalStrategies = additionalProperties.strategies || {};
+  const additionalExecutionStrategies =
+    additionalProperties.executionStrategies || {};
+
+  return {
+    Meta: {
+      eip712ChainId,
+      proxyFactory: '0x401835F2Edb78533f05Eb223A96234cf461B95A3',
+      masterSpace: '0xf91195b197e0c003B4E8c96983aade5A913c1BBF'
+    },
+    Authenticators: {
+      EthSig: '0xBc4733e2B4ac2e9A842fc599e870B548fef9a25B',
+      EthTx: '0x1448D985A8C08245AC03f90F0826F9Db83aD569D',
+      ...additionalAuthenticators
+    },
+    Strategies: {
+      Vanilla: '0xfB4996466825b9CD2D1C01b208edcf56D36698b7',
+      Comp: '0x2F136A8937129A66f6092d930d93f092c6eaFEa4',
+      OZVotes: '0x9941442691a5e3170F9b0B2219e1EE0A651C7Fa0',
+      Whitelist: '0x7a0f4E4AF0F79620Cdb8dc0ac43564E1Fe7b8893',
+      ...additionalStrategies
+    },
+    ProposalValidations: {
+      VotingPower: null,
+    },
+    ExecutionStrategies: {
+      SimpleQuorumAvatar: '0xecE4f6b01a2d7FF5A9765cA44162D453fC455e42',
+      SimpleQuorumTimelock: '0xf2A1C2f2098161af98b2Cc7E382AB7F3ba86Ebc4',
+      Axiom: null,
+      Isokratia: null,
+      ...additionalExecutionStrategies
+    }
+  };
+}
+
 function createEvmConfig(
   networkId: keyof typeof evmNetworks
 ): EvmNetworkConfig {
@@ -97,6 +137,7 @@ function createEvmConfig(
 }
 
 export const evmNetworks = {
+  oorttestnet: createStandardConfigOORT(9700),
   eth: createStandardConfig(1),
   oeth: createStandardConfig(10),
   sep: createStandardConfig(11155111, {
@@ -132,7 +173,7 @@ export const evmNetworks = {
       Axiom: null,
       Isokratia: null
     }
-  }
+  },
 } as const;
 
 export const evmMainnet = createEvmConfig('eth');
@@ -141,3 +182,4 @@ export const evmOptimism = createEvmConfig('oeth');
 export const evmPolygon = createEvmConfig('matic');
 export const evmArbitrum = createEvmConfig('arb1');
 export const evmLineaGoerli = createEvmConfig('linea-testnet');
+export const evmoortTestnet = createEvmConfig('oorttestnet');

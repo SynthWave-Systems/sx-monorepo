@@ -11,6 +11,7 @@ export const CHAIN_IDS: Record<Exclude<NetworkID, 's' | 's-tn'>, ChainId> = {
   eth: 1,
   oeth: 10,
   matic: 137,
+  oorttestnet: 9700,
   arb1: 42161,
   'linea-testnet': 59140,
   sep: 11155111,

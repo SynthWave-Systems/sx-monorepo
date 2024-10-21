@@ -6,7 +6,8 @@ import {
   EvmNetworkConfig,
   evmOptimism,
   evmPolygon,
-  evmSepolia
+  evmSepolia,
+  evmoortTestnet
 } from '@snapshot-labs/sx';
 import fetch from 'cross-fetch';
 import { Response } from 'express';
@@ -19,7 +20,8 @@ export const NETWORKS = new Map<number, EvmNetworkConfig>([
   [42161, evmArbitrum],
   [1, evmMainnet],
   [11155111, evmSepolia],
-  [59140, evmLineaGoerli]
+  [59140, evmLineaGoerli],
+  [9700, evmoortTestnet]
 ]);
 
 export const createNetworkHandler = (chainId: number) => {

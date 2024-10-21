@@ -35,6 +35,12 @@
     "multicall": "0x7f6A10218264a22B4309F3896745687E712962a0",
     "explorer": "https://ftmscan.com"
   },
+  "9700": {
+    "key": "9700",
+    "chainId": 9700,
+    "multicall": "0x4F891ECb06fe749fBcb62939A8CD87FbdbbC2376",
+    "explorer": "https://dev-scan.oortech.com"
+  },
   "8453": {
     "key": "8453",
     "chainId": 8453,
