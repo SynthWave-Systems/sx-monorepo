@@ -75,9 +75,9 @@ watch(model, () => {
   >
     <Combobox v-slot="{ open }" v-model="inputValue" as="div" nullable>
       <Float
-        adaptive-width
+        :adaptive-width="inline ? false : true"
         strategy="fixed"
-        placement="bottom-end"
+        placement="bottom-start"
         :offset="gap && inline ? gap : 0"
       >
         <div
@@ -112,7 +112,7 @@ watch(model, () => {
           </div>
         </div>
         <ComboboxOptions
-          class="w-full bg-skin-border border-t-skin-text/10 border shadow-xl overflow-hidden"
+          class="w-full bg-skin-border border-t-skin-text/10 border shadow-xl overflow-hidden max-w-[80vw] sm:max-w-[300px]"
           :class="inline ? 'rounded-lg' : 'rounded-b-lg'"
         >
           <div class="max-h-[208px] overflow-y-auto">
@@ -138,7 +138,7 @@ watch(model, () => {
               >
                 <component :is="item.icon" class="size-[20px] mr-2" />
                 <span
-                  class="w-full py-2 text-skin-link"
+                  class="w-full py-2 text-skin-link truncate"
                   :class="{
                     'opacity-40': disabled,
                     'cursor-pointer': !disabled
