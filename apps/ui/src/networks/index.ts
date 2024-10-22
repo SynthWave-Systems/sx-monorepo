@@ -1,11 +1,11 @@
 import { NetworkID } from '@/types';
 import { createEvmNetwork } from './evm';
-//import { createOffchainNetwork } from './offchain';
+import { createOffchainNetwork } from './offchain';
 import { createStarknetNetwork } from './starknet';
 import { ExplorePageProtocol, ProtocolConfig, ReadWriteNetwork } from './types';
 
-//const snapshotNetwork = createOffchainNetwork('s');
-//const snapshotTestnetNetwork = createOffchainNetwork('s-tn');
+const snapshotNetwork = createOffchainNetwork('s');
+const snapshotTestnetNetwork = createOffchainNetwork('s-tn');
 const starknetNetwork = createStarknetNetwork('sn');
 const starknetSepoliaNetwork = createStarknetNetwork('sn-sep');
 const polygonNetwork = createEvmNetwork('matic');
@@ -30,7 +30,7 @@ export const evmNetworks: NetworkID[] = [
   'linea-testnet',
   'oorttestnet',
 ];
-export const offchainNetworks: NetworkID[] = ['s', 's-tn'];
+export const offchainNetworks: NetworkID[] = ['s', 's-tn', 'oorttestnet'];
 export const starknetNetworks: NetworkID[] = ['sn', 'sn-sep'];
 // This network is used for aliases/follows/profiles/explore page.
 export const metadataNetwork: NetworkID =
@@ -38,11 +38,12 @@ export const metadataNetwork: NetworkID =
 
 export const getNetwork = (id: NetworkID) => {
   //console.log('id', id)
+  console.log(enabledNetworks)
   if (!enabledNetworks.includes(id))
     throw new Error(`Network ${id} is not enabled`);
 
-  //if (id === 's') return snapshotNetwork;
-  //if (id === 's-tn') return snapshotTestnetNetwork;
+  if (id === 's') return snapshotNetwork;
+  if (id === 's-tn') return snapshotTestnetNetwork;
   if (id === 'matic') return polygonNetwork;
   if (id === 'arb1') return arbitrumNetwork;
   if (id === 'oeth') return optimismNetwork;

@@ -63,18 +63,18 @@ function createStandardConfigOORT(
     },
     Authenticators: {
       EthSig: '0xBc4733e2B4ac2e9A842fc599e870B548fef9a25B',
-      EthTx: '0x1448D985A8C08245AC03f90F0826F9Db83aD569D',
+      EthTx: '0xfB4996466825b9CD2D1C01b208edcf56D36698b7',
       ...additionalAuthenticators
     },
     Strategies: {
-      Vanilla: '0xfB4996466825b9CD2D1C01b208edcf56D36698b7',
+      Vanilla: '0x03215CfbcE47345dE5E9664156cF1c8D844DE6C0',
       Comp: '0x2F136A8937129A66f6092d930d93f092c6eaFEa4',
       OZVotes: '0x9941442691a5e3170F9b0B2219e1EE0A651C7Fa0',
       Whitelist: '0x7a0f4E4AF0F79620Cdb8dc0ac43564E1Fe7b8893',
       ...additionalStrategies
     },
     ProposalValidations: {
-      VotingPower: '0x5ff07675eC22C02E4447cbA03A9b80c71652ba12',
+      VotingPower: '0xB39722EC5Bd1DfE7AB91988CEe46407C2cEE9580',
     },
     ExecutionStrategies: {
       SimpleQuorumAvatar: '0xecE4f6b01a2d7FF5A9765cA44162D453fC455e42',
