@@ -74,7 +74,7 @@ function createStandardConfigOORT(
       ...additionalStrategies
     },
     ProposalValidations: {
-      VotingPower: null,
+      VotingPower: '0x5ff07675eC22C02E4447cbA03A9b80c71652ba12',
     },
     ExecutionStrategies: {
       SimpleQuorumAvatar: '0xecE4f6b01a2d7FF5A9765cA44162D453fC455e42',
