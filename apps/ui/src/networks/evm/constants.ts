@@ -30,9 +30,9 @@ export function createConstants(networkId: NetworkID) {
 
   const SUPPORTED_STRATEGIES = {
     [config.Strategies.Vanilla]: true,
-    [config.Strategies.Comp]: false,
-    [config.Strategies.OZVotes]: false,
-    [config.Strategies.Whitelist]: false
+    [config.Strategies.Comp]: true,
+    [config.Strategies.OZVotes]: true,
+    [config.Strategies.Whitelist]: true
   };
 
   const SUPPORTED_EXECUTORS = {

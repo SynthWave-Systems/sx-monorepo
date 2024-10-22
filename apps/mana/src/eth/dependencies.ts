@@ -15,8 +15,7 @@ export function getEthereumWallet(mnemonic: string, index: number) {
 export const createWalletProxy = (mnemonic: string, chainId: number) => {
   const signers = new Map<string, Wallet>();
   const provider = new StaticJsonRpcProvider(
-    `https://rpc.snapshot.org/${chainId}`,
-    chainId
+    `https://dev-rpc.oortech.com`
   );
 
   return (spaceAddress: string) => {

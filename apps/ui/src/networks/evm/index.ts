@@ -80,7 +80,9 @@ export const METADATA: Record<string, Metadata> = {
   oorttestnet: {
     name: 'OORT Testnet',
     chainId: 9700,
-    apiUrl: 'http://oort.com', //graph url here
+    apiUrl:
+      import.meta.env.VITE_OORT_TESTNET_API ??
+      'http://ip:8000/subgraphs/name/snapshot-labs/sx-subgraph/',
     avatar:
       'https://blazebyte1.standard.us-east-1.oortech.com/oort32.png?signature=5cf41c44503a93f3a53dd4eddbc5e9cef29d5f1e0c61f6b454e81756a599f2fbf3234ac4f5125de090f5d63bd6820a60a547b478d140f8f80c1d3bbce4867b68bd74100ed013d83b0fa132d4467bcadc4f8d64fab15e68634913d4d886642439&provider=1',
     blockTime: 25965
