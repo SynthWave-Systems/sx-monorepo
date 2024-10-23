@@ -21,10 +21,10 @@ const options = computed(() => {
       .filter(([, network]) => {
         if (
           props.definition.networkId === 's' &&
-          'testnet' in network &&
-          network.testnet
+          'mainnet' in network &&
+          network.mainnet
         ) {
-          return false;
+          return false; //check to return ALL networks
         }
 
         return true;

@@ -7,7 +7,7 @@ const CHILDREN_LIMIT = 16;
 const PARENT_SPACE_DEFINITION = {
   type: 'string',
   title: 'Main space',
-  examples: ['pistachiodao.eth'],
+  examples: [''],
   tooltip:
     'The space that this space is a sub-space of will be displayed on the space page'
 };
@@ -15,7 +15,7 @@ const PARENT_SPACE_DEFINITION = {
 const CHILD_DEFINITION = {
   type: 'string',
   title: 'Sub-space(s)',
-  examples: ['pistachiodao.eth'],
+  examples: [''],
   tooltip: 'Related Sub-spaces listed here will be displayed on the space page'
 };
 
@@ -34,7 +34,7 @@ const CUSTOM_DOMAIN_DEFINITION = {
   format: 'domain',
   title: 'Domain name',
   maxLength: 64,
-  examples: ['vote.balancer.fi']
+  examples: ['']
 };
 
 const parent = defineModel<string>('parent', { required: true });
@@ -148,7 +148,7 @@ watchEffect(() => {
   <h4 class="eyebrow mb-2 font-medium">Sub-spaces</h4>
   <UiMessage
     type="info"
-    :learn-more-link="'https://docs.snapshot.org/user-guides/spaces/sub-spaces'"
+    :learn-more-link="''"
   >
     Add a sub-space to display its proposals within your space. If you want the
     current space to be displayed on the sub-space's page, the space need to be
@@ -199,7 +199,7 @@ watchEffect(() => {
   <h4 class="eyebrow mb-2 font-medium mt-4">Custom domain</h4>
   <UiMessage
     type="info"
-    :learn-more-link="'https://docs.snapshot.org/spaces/add-custom-domain'"
+    :learn-more-link="''"
   >
     To setup a custom domain you additionally need to open a pull request on
     GitHub after you have created the space.
@@ -219,8 +219,7 @@ watchEffect(() => {
     <div class="flex flex-col">
       <h4 class="text-base">Delete space</h4>
       <span class="leading-5">
-        Delete this space and all its content. This cannot be undone and you
-        will not be able to create a new space with the same ENS domain name.
+        Delete this space and all its content. This cannot be undone.
       </span>
     </div>
     <UiButton

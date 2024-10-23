@@ -23,12 +23,12 @@ export default [
     name: 'site',
     component: Site,
     children: [
-      { path: '', name: 'site-landing', component: Landing },
-      { path: '/network', name: 'site-network', component: Network },
-      { path: '/ecosystem', name: 'site-ecosystem', component: Ecosystem },
-      { path: '/ecosystem/:app', name: 'site-app', component: App },
-      { path: '/terms-of-use', name: 'site-terms', component: Terms },
-      { path: '/privacy-policy', name: 'site-policy', component: Policy }
+      { path: '', name: 'site-landing', component: Home },
+      { path: '/network', name: 'site-network', component: Home },
+      { path: '/ecosystem', name: 'site-ecosystem', component: Home },
+      { path: '/ecosystem/:app', name: 'site-app', component: Home },
+      { path: '/terms-of-use', name: 'site-terms', component: Home },
+      { path: '/privacy-policy', name: 'site-policy', component: Home }
     ]
   },
   {
