@@ -74,7 +74,7 @@ function createStandardConfigOORT(
       ...additionalStrategies
     },
     ProposalValidations: {
-      VotingPower: '0xB39722EC5Bd1DfE7AB91988CEe46407C2cEE9580',
+      VotingPower: '0xB39722EC5Bd1DfE7AB91988CEe46407C2cEE9580'
     },
     ExecutionStrategies: {
       SimpleQuorumAvatar: '0xecE4f6b01a2d7FF5A9765cA44162D453fC455e42',
@@ -173,7 +173,7 @@ export const evmNetworks = {
       Axiom: null,
       Isokratia: null
     }
-  },
+  }
 } as const;
 
 export const evmMainnet = createEvmConfig('eth');
