@@ -58,5 +58,17 @@
       "address": "0x0000000000021210000000000000000000000000",
       "startBlock": 858097
     }
+  },
+  "oorttesnet": {
+    "ProxyFactory": {
+      "address": "0x401835F2Edb78533f05Eb223A96234cf461B95A3",
+      "startBlock": 286414
+
+    },
+    "L1AvatarExecutionStrategyFactory": {
+      "address": "0x0000000000021210000000000000000000000000",
+      "startBlock": 286414
+
+    }
   }
 }

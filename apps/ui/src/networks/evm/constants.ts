@@ -1,7 +1,7 @@
 import { AbiCoder } from '@ethersproject/abi';
 import { Web3Provider } from '@ethersproject/providers';
 import { StandardMerkleTree } from '@openzeppelin/merkle-tree';
-import { clients, evmNetworks } from '@snapshot-labs/sx';
+import { clients, evmNetworks } from '@synthwave-systems/sx';
 import { MAX_SYMBOL_LENGTH } from '@/helpers/constants';
 import { pinGraph } from '@/helpers/pin';
 import { getUrl, shorten } from '@/helpers/utils';

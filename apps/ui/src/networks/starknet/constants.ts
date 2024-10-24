@@ -1,5 +1,5 @@
 import { Web3Provider } from '@ethersproject/providers';
-import { clients, starknetNetworks, utils } from '@snapshot-labs/sx';
+import { clients, starknetNetworks, utils } from '@synthwave-systems/sx';
 import { CallData, uint256 } from 'starknet';
 import { MAX_SYMBOL_LENGTH } from '@/helpers/constants';
 import { pinPineapple } from '@/helpers/pin';

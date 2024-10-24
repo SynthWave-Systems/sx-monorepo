@@ -1,4 +1,4 @@
-import { utils } from '@snapshot-labs/sx';
+import { utils } from '@synthwave-systems/sx';
 import { defineStore } from 'pinia';
 import { getNetwork } from '@/networks';
 import { VotingPower, VotingPowerStatus } from '@/networks/types';

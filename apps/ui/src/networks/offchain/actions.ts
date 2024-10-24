@@ -7,7 +7,7 @@ import {
   offchainGoerli,
   offchainMainnet,
   OffchainNetworkConfig
-} from '@snapshot-labs/sx';
+} from '@synthwave-systems/sx';
 import { setEnsTextRecord } from '@/helpers/ens';
 import { getSwapLink } from '@/helpers/link';
 import {

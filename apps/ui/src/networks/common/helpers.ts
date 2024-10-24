@@ -1,7 +1,7 @@
 import {
   getExecutionData as _getExecutionData,
   Choice as SdkChoice
-} from '@snapshot-labs/sx';
+} from '@synthwave-systems/sx';
 import { MetaTransaction } from '@snapshot-labs/sx/dist/utils/encoding/execution-hash';
 import { getUrl } from '@/helpers/utils';
 import { Connector, NetworkHelpers, StrategyConfig } from '@/networks/types';

@@ -1,4 +1,4 @@
-import * as sx from '@snapshot-labs/sx';
+import * as sx from '@synthwave-systems/sx';
 import { describe, expect, it, vi } from 'vitest';
 import { getNetwork } from '../index';
 

@@ -4,7 +4,7 @@ import {
   NetworkConfig,
   starknetMainnet,
   starknetSepolia
-} from '@snapshot-labs/sx';
+} from '@synthwave-systems/sx';
 import {
   Account,
   AllowArray,
