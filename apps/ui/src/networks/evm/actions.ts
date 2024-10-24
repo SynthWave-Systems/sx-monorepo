@@ -12,7 +12,7 @@ import {
   evmSepolia,
   evmoortTestnet,
   getEvmStrategy
-} from '@snapshot-labs/sx';
+} from '@synthwave-systems/sx';
 import { vote as highlightVote } from '@/helpers/highlight';
 import { getSwapLink } from '@/helpers/link';
 import { executionCall, MANA_URL } from '@/helpers/mana';
